@@ -3,8 +3,8 @@ package hive.pandora.security;
 import org.springframework.beans.factory.annotation.Value;
 
 public class JwtConfig {
-  @Value("${security.jwt.uri:/caronte")
-  private String Uri;
+  @Value("${security.jwt.uri:/auth}")
+  private String uri;
 
   @Value("${security.jwt.header:Authorization}")
   private String header;
@@ -19,7 +19,7 @@ public class JwtConfig {
   private String secret;
 
   public String getUri() {
-    return Uri;
+    return uri;
   }
 
   public String getHeader() {
